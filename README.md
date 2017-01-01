@@ -1,0 +1,2 @@
+# simple-notepad
+for learning
