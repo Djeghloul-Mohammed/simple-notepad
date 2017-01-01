@@ -82,5 +82,20 @@ namespace Notepad
         {
             mainRichTextBox.Text = System.DateTime.Now.ToString();
         }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog f = new FontDialog();
+            if (f.ShowDialog() == DialogResult.OK)
+                mainRichTextBox.Font = f.Font;
+
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            if (cd.ShowDialog() == DialogResult.OK)
+                mainRichTextBox.ForeColor = cd.Color;
+        }
     }
 }
