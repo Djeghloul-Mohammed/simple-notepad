@@ -41,10 +41,21 @@ namespace Notepad
         {
             OpenFileDialog of = new OpenFileDialog();
             of.Title = "open";
-            of.Filter = "text document(*.txt)|*.txt|AllowDrop files";
+            of.Filter = "text document(*.txt)|*.txt|AllowDrop files(*.*)";
             if (of.ShowDialog() == DialogResult.OK)
                 mainRichTextBox.LoadFile(of.FileName, RichTextBoxStreamType.PlainText);
             this.Text = of.FileName;
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sd = new SaveFileDialog();
+            sd.Title = "save";
+            sd.Filter = "text document(*.txt)|*.txt|all files(*.*)";
+            if (sd.ShowDialog() == DialogResult.OK)
+                mainRichTextBox.SaveFile(sd.FileName, RichTextBoxStreamType.PlainText);
+            this.Text = sd.FileName;
+
         }
     }
 }
