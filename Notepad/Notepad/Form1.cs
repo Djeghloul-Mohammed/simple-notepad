@@ -16,5 +16,35 @@ namespace Notepad
         {
             InitializeComponent();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("all right reserved", "help");
+        }
+
+        private void mainRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+            mainRichTextBox.Text = "";
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainRichTextBox.Text = "";
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog of = new OpenFileDialog();
+            of.Title = "open";
+            of.Filter = "text document(*.txt)|*.txt|AllowDrop files";
+            if (of.ShowDialog() == DialogResult.OK)
+                mainRichTextBox.LoadFile(of.FileName, RichTextBoxStreamType.PlainText);
+            this.Text = of.FileName;
+        }
     }
 }
