@@ -29,19 +29,19 @@ namespace Notepad
 
         private void mainRichTextBox_TextChanged(object sender, EventArgs e)
         {
-            mainRichTextBox.Text = "";
+            //mainRichTextBox.Text = "";
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mainRichTextBox.Text = "";
+            //mainRichTextBox.Text = "";
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog of = new OpenFileDialog();
             of.Title = "open";
-            of.Filter = "text document(*.txt)|*.txt|AllowDrop files(*.*)";
+            of.Filter = "text document(*.txt)|*.txt|All files(*.*)";
             if (of.ShowDialog() == DialogResult.OK)
                 mainRichTextBox.LoadFile(of.FileName, RichTextBoxStreamType.PlainText);
             this.Text = of.FileName;

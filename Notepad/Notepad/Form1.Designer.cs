@@ -54,7 +54,10 @@
             // 
             // mainRichTextBox
             // 
+            this.mainRichTextBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.mainRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainRichTextBox.Font = new System.Drawing.Font("MS Outlook", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.mainRichTextBox.ForeColor = System.Drawing.Color.Lime;
             this.mainRichTextBox.Location = new System.Drawing.Point(0, 24);
             this.mainRichTextBox.Name = "mainRichTextBox";
             this.mainRichTextBox.Size = new System.Drawing.Size(889, 466);
