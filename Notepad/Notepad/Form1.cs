@@ -57,5 +57,30 @@ namespace Notepad
             this.Text = sd.FileName;
 
         }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainRichTextBox.Copy();
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainRichTextBox.Paste();
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainRichTextBox.Cut();
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainRichTextBox.SelectAll();
+        }
+
+        private void datetimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainRichTextBox.Text = System.DateTime.Now.ToString();
+        }
     }
 }
